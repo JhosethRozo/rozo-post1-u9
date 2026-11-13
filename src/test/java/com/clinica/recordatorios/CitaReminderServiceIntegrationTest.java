@@ -56,6 +56,17 @@ class CitaReminderServiceIntegrationTest {
     }
 
     @Test
+    void enviarRecordatoriosPendientes_canalEmail_noInvocaGatewaySms() {
+        Cita cita = citaRepository.save(new Cita(null, "Ana Gómez", "ana@correo.com",
+            LocalDateTime.of(2026, 8, 10, 15, 0), CanalNotificacion.EMAIL, false));
+
+        assertEquals(1, citaReminderService.enviarRecordatoriosPendientes());
+
+        assertTrue(citaRepository.findById(cita.getId()).orElseThrow().isRecordatorioEnviado());
+        verifyNoInteractions(notificadorSmsGateway);
+    }
+
+    @Test
     void enviarRecordatorioUrgente_gatewayFalla_conservaEstadoPendienteEnBaseDeDatos() {
         Cita cita = citaRepository.save(new Cita(null, "Marta Ruiz", "3009876543",
             LocalDateTime.of(2026, 8, 10, 10, 30), CanalNotificacion.SMS, false));
