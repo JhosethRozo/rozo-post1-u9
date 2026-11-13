@@ -1,0 +1,30 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< com.clinica:recordatorios-citas-service >---------------
+[INFO] Building recordatorios-citas-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (default) @ recordatorios-citas-service ---
+[INFO] argLine set to "-javaagent:C:\\Users\\CodexSandboxOffline\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.12\\org.jacoco.agent-0.8.12-runtime.jar=destfile=C:\\Users\\Public\\Dev\\Asignaturas\\Patrones de dise�o\\Practica\\rozo-post1-u9\\target\\jacoco.exec"
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ recordatorios-citas-service ---
+[INFO] skip non existing resourceDirectory C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ recordatorios-citas-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 14 source files with javac [debug parameters release 21] to target\classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  37.170 s
+[INFO] Finished at: 2026-11-12T22:20:15-05:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,143 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< com.clinica:recordatorios-citas-service >---------------
+[INFO] Building recordatorios-citas-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ recordatorios-citas-service ---
+[INFO] Deleting C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9\target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (default) @ recordatorios-citas-service ---
+[INFO] argLine set to "-javaagent:C:\\Users\\CodexSandboxOffline\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.12\\org.jacoco.agent-0.8.12-runtime.jar=destfile=C:\\Users\\Public\\Dev\\Asignaturas\\Patrones de dise�o\\Practica\\rozo-post1-u9\\target\\jacoco.exec"
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ recordatorios-citas-service ---
+[INFO] skip non existing resourceDirectory C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ recordatorios-citas-service ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 16 source files with javac [debug parameters release 21] to target\classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ recordatorios-citas-service ---
+[INFO] skip non existing resourceDirectory C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ recordatorios-citas-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ recordatorios-citas-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.clinica.recordatorios.CitaReminderServiceIntegrationTest
+22:28:38.420 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.clinica.recordatorios.RecordatoriosCitasServiceApplication for test class com.clinica.recordatorios.CitaReminderServiceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.3.13)
+
+2026-11-12T22:28:39.500-05:00  INFO 3488 --- [           main] c.c.r.CitaReminderServiceIntegrationTest : Starting CitaReminderServiceIntegrationTest using Java 21.0.12.1 with PID 3488 (started by L&R in C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9)
+2026-11-12T22:28:39.505-05:00  INFO 3488 --- [           main] c.c.r.CitaReminderServiceIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2026-11-12T22:28:41.072-05:00  INFO 3488 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-12T22:28:41.213-05:00  INFO 3488 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 1 JPA repository interface.
+WARNING: A Java agent has been loaded dynamically (C:\Users\CodexSandboxOffline\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-12T22:28:52.478-05:00  INFO 3488 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-12T22:28:53.426-05:00  INFO 3488 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:5c37261d-dcda-4669-8af0-503f0efaf167 user=SA
+2026-11-12T22:28:53.437-05:00  INFO 3488 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-12T22:28:53.651-05:00  INFO 3488 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-12T22:28:53.908-05:00  INFO 3488 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-12T22:28:54.051-05:00  INFO 3488 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-12T22:28:54.573-05:00  INFO 3488 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-12T22:28:57.005-05:00  INFO 3488 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-12T22:28:57.121-05:00  INFO 3488 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-12T22:28:58.338-05:00  WARN 3488 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-12T22:28:59.176-05:00  INFO 3488 --- [           main] c.c.r.CitaReminderServiceIntegrationTest : Started CitaReminderServiceIntegrationTest in 20.312 seconds (process running for 23.498)
+[EMAIL a ana@correo.com] Recordatorio: tiene una cita el 2026-08-10T15:00
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.56 s -- in com.clinica.recordatorios.CitaReminderServiceIntegrationTest
+[INFO] Running com.clinica.recordatorios.repository.CitaRepositoryTest
+2026-11-12T22:29:00.047-05:00  INFO 3488 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.clinica.recordatorios.repository.CitaRepositoryTest]: CitaRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T22:29:00.188-05:00  INFO 3488 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.clinica.recordatorios.RecordatoriosCitasServiceApplication for test class com.clinica.recordatorios.repository.CitaRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.3.13)
+
+2026-11-12T22:29:00.251-05:00  INFO 3488 --- [           main] c.c.r.repository.CitaRepositoryTest      : Starting CitaRepositoryTest using Java 21.0.12.1 with PID 3488 (started by L&R in C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9)
+2026-11-12T22:29:00.251-05:00  INFO 3488 --- [           main] c.c.r.repository.CitaRepositoryTest      : No active profile set, falling back to 1 default profile: "default"
+2026-11-12T22:29:00.465-05:00  INFO 3488 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-12T22:29:00.495-05:00  INFO 3488 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interface.
+2026-11-12T22:29:00.524-05:00  INFO 3488 --- [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2026-11-12T22:29:00.564-05:00  INFO 3488 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:bdc3f8ba-501c-4a9f-9d56-a062e241b6e0;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2026-11-12T22:29:00.623-05:00  INFO 3488 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-12T22:29:00.633-05:00  INFO 3488 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-12T22:29:00.660-05:00  INFO 3488 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-12T22:29:00.761-05:00  INFO 3488 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists citas cascade 
+Hibernate: create table citas (recordatorio_enviado boolean not null, fecha_hora_cita timestamp(6) not null, id bigint generated by default as identity, paciente_contacto varchar(255) not null, paciente_nombre varchar(255) not null, canal_preferido enum ('EMAIL','SMS') not null, primary key (id))
+2026-11-12T22:29:00.768-05:00  INFO 3488 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-12T22:29:00.847-05:00  INFO 3488 --- [           main] c.c.r.repository.CitaRepositoryTest      : Started CitaRepositoryTest in 0.65 seconds (process running for 25.163)
+Hibernate: insert into citas (canal_preferido,fecha_hora_cita,paciente_contacto,paciente_nombre,recordatorio_enviado,id) values (?,?,?,?,?,default)
+Hibernate: insert into citas (canal_preferido,fecha_hora_cita,paciente_contacto,paciente_nombre,recordatorio_enviado,id) values (?,?,?,?,?,default)
+Hibernate: insert into citas (canal_preferido,fecha_hora_cita,paciente_contacto,paciente_nombre,recordatorio_enviado,id) values (?,?,?,?,?,default)
+Hibernate: insert into citas (canal_preferido,fecha_hora_cita,paciente_contacto,paciente_nombre,recordatorio_enviado,id) values (?,?,?,?,?,default)
+Hibernate: select c1_0.id,c1_0.canal_preferido,c1_0.fecha_hora_cita,c1_0.paciente_contacto,c1_0.paciente_nombre,c1_0.recordatorio_enviado from citas c1_0 where c1_0.fecha_hora_cita between ? and ? and not(c1_0.recordatorio_enviado)
+Hibernate: insert into citas (canal_preferido,fecha_hora_cita,paciente_contacto,paciente_nombre,recordatorio_enviado,id) values (?,?,?,?,?,default)
+Hibernate: insert into citas (canal_preferido,fecha_hora_cita,paciente_contacto,paciente_nombre,recordatorio_enviado,id) values (?,?,?,?,?,default)
+Hibernate: insert into citas (canal_preferido,fecha_hora_cita,paciente_contacto,paciente_nombre,recordatorio_enviado,id) values (?,?,?,?,?,default)
+Hibernate: select c1_0.id,c1_0.canal_preferido,c1_0.fecha_hora_cita,c1_0.paciente_contacto,c1_0.paciente_nombre,c1_0.recordatorio_enviado from citas c1_0 where c1_0.fecha_hora_cita between ? and ? and not(c1_0.recordatorio_enviado)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.880 s -- in com.clinica.recordatorios.repository.CitaRepositoryTest
+[INFO] Running com.clinica.recordatorios.service.CitaReminderServiceImplTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.535 s -- in com.clinica.recordatorios.service.CitaReminderServiceImplTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ recordatorios-citas-service ---
+[INFO] Building jar: C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9\target\recordatorios-citas-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.13:repackage (repackage) @ recordatorios-citas-service ---
+[INFO] Replacing main artifact C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9\target\recordatorios-citas-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9\target\recordatorios-citas-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report) @ recordatorios-citas-service ---
+[INFO] Loading execution data file C:\Users\Public\Dev\Asignaturas\Patrones de dise�o\Practica\rozo-post1-u9\target\jacoco.exec
+[INFO] Analyzed bundle 'recordatorios-citas-service' with 10 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  47.384 s
+[INFO] Finished at: 2026-11-12T22:29:04-05:00
+[INFO] ------------------------------------------------------------------------
