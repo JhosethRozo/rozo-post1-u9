@@ -17,6 +17,7 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
@@ -27,6 +28,7 @@ class CitaReminderServiceImplTest {
     @Mock private CitaRepository citaRepository;
     @Mock private ReminderChannelFactory reminderChannelFactory;
     @Mock private ReminderChannel reminderChannelMock;
+    @Mock private ReminderChannel canalUrgenteMock;
 
     // Fake provisto por el JDK: conserva el comportamiento real del reloj.
     private final Clock clockFijo = Clock.fixed(
@@ -36,7 +38,45 @@ class CitaReminderServiceImplTest {
     @BeforeEach
     void setUp() {
         citaReminderService = new CitaReminderServiceImpl(
-            citaRepository, reminderChannelFactory, clockFijo);
+            citaRepository, reminderChannelFactory, canalUrgenteMock, clockFijo);
+    }
+
+    @Test
+    void enviarRecordatorioUrgente_citaExistente_usaCanalUrgenteInyectado() {
+        Cita cita = citaUrgente(5L);
+        when(citaRepository.findById(5L)).thenReturn(Optional.of(cita));
+        citaReminderService.enviarRecordatorioUrgente(5L);
+        verify(canalUrgenteMock).enviar(eq(cita), contains("URGENTE"));
+        verify(citaRepository).save(argThat(guardada -> guardada == cita && guardada.isRecordatorioEnviado()));
+        assertTrue(cita.isRecordatorioEnviado());
+        verifyNoInteractions(reminderChannelFactory);
+    }
+
+    @Test
+    void enviarRecordatorioUrgente_gatewayFalla_noMarcaComoEnviado() {
+        Cita cita = citaUrgente(6L);
+        when(citaRepository.findById(6L)).thenReturn(Optional.of(cita));
+        RuntimeException fallo = new RuntimeException("Gateway de SMS no disponible");
+        doThrow(fallo).when(canalUrgenteMock).enviar(any(), anyString());
+        assertSame(fallo, assertThrows(RuntimeException.class,
+            () -> citaReminderService.enviarRecordatorioUrgente(6L)));
+        assertFalse(cita.isRecordatorioEnviado());
+        verify(citaRepository, never()).save(any());
+    }
+
+    @Test
+    void enviarRecordatorioUrgente_citaInexistente_lanzaCitaNoEncontradaException() {
+        when(citaRepository.findById(99L)).thenReturn(Optional.empty());
+        CitaNoEncontradaException error = assertThrows(CitaNoEncontradaException.class,
+            () -> citaReminderService.enviarRecordatorioUrgente(99L));
+        assertEquals("Cita no encontrada: 99", error.getMessage());
+        verifyNoInteractions(canalUrgenteMock);
+        verify(citaRepository, never()).save(any());
+    }
+
+    private Cita citaUrgente(Long id) {
+        return new Cita(id, "Luis Peña", "3001234567",
+            LocalDateTime.of(2026, 8, 10, 10, 30), CanalNotificacion.SMS, false);
     }
 
     @Test
