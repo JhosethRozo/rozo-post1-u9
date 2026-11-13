@@ -13,3 +13,12 @@ Estas decisiones se registran antes de implementar la suite unitaria.
 | Clock | Fake mediante Clock.fixed | Implementación completa del JDK que congela el instante y mantiene el comportamiento real de LocalDateTime.now(clock). No se mockean instant ni getZone. |
 
 Strategy permite sustituir el transporte con una interfaz propia. Factory permite observar explícitamente la selección de estrategia. La inyección por constructor permite reemplazar ambos colaboradores sin arrancar Spring.
+
+## Diagnóstico antes del refactor DIP
+
+La línea `ReminderChannel canalUrgente = new SmsReminderChannel(new TwilioNotificadorSmsGateway());`
+construye las dos dependencias dentro de enviarRecordatorioUrgente. Un mock entregado desde la prueba nunca
+sería usado por ese método, por lo que no permite simular el fallo del gateway mediante la inyección habitual.
+En contraste, enviarRecordatoriosPendientes recibe repositorio, factory y reloj por constructor y permite
+sustituirlos directamente. Interceptar construcciones con mockConstruction sería técnicamente posible,
+pero acoplaría la prueba a la construcción concreta. El refactor debe mover la composición a Spring.

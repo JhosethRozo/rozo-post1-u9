@@ -33,6 +33,17 @@ public class CitaReminderServiceImpl implements CitaReminderService {
         }
         return citasPorNotificar.size();
     }
+    @Override
+    public void enviarRecordatorioUrgente(Long citaId) {
+        Cita cita = citaRepository.findById(citaId)
+            .orElseThrow(() -> new CitaNoEncontradaException(citaId));
+        ReminderChannel canalUrgente = new com.clinica.recordatorios.channel.SmsReminderChannel(
+            new com.clinica.recordatorios.channel.gateway.TwilioNotificadorSmsGateway());
+        canalUrgente.enviar(cita, "URGENTE: su cita es en menos de 2 horas y no ha sido confirmada");
+        cita.setRecordatorioEnviado(true);
+        citaRepository.save(cita);
+    }
+
     private String construirMensaje(Cita cita) {
         return "Recordatorio: tiene una cita el " + cita.getFechaHoraCita();
     }
