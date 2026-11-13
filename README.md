@@ -201,6 +201,11 @@ El script de captura requiere Python y Playwright, independientemente del build 
 El reporte navegable se genera en `target/site/jacoco/index.html` y los resultados en
 `target/surefire-reports/`.
 
+La [ejecución de CI con las once pruebas](https://github.com/JhosethRozo/rozo-post1-u9/actions/runs/43360103026)
+terminó en **Success**. El badge del workflow se verificó en estado `passing`.
+
+![GitHub Actions Success](docs/evidencias/11-github-actions.png)
+
 ## Alcance del enunciado
 
 Se conserva el comportamiento del código solicitado: EMAIL imprime en consola y SMS usa un

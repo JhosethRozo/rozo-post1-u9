@@ -23,6 +23,10 @@ la consola de Windows, sin afectar la compilación ni las aserciones.
 
 ## Correspondencia con la rúbrica
 
+**Checkpoint 11 comprobado:** [Actions #2 — Success](https://github.com/JhosethRozo/rozo-post1-u9/actions/runs/43360103026),
+con las once pruebas del estado final del código. [Captura directa](evidencias/11-github-actions.png),
+[metadatos de la API](evidencias/11-github-actions.json) y [badge passing guardado](evidencias/11-ci-badge.svg).
+
 | Criterio | Comprobación entregada |
 | --- | --- |
 | Implementación, 40 % | Mocks para repositorio/Factory/estrategias, Clock.fixed explícito, refactor DIP, JPA/H2 y gateway con @MockBean. |
